@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile"
+    android:orientation="vertical"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="@color/white"
+        android:text="Full Name"
+        />
+
+    <TextView
+        android:id="@+id/textViewFullname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/edit_text_border"
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"
+        android:text="fullname" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Email"
+        />
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/edit_text_border"
+        android:textSize="20dp"
+        android:text="user@gamil.com"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:text="Phone Number" />
+    <TextView
+        android:id="@+id/textViewphoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/edit_text_border"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Phone number" />
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/tranparent_blue"
+        android:layout_height="wrap_content"
+        android:text="Logout" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".m_add_detail"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Details"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:cardElevation="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:id="@+id/time"
+                android:textSize="20sp"/>-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:textSize="20sp"/>
+
+
+            <EditText
+                android:id="@+id/currentDate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textSize="20sp"/>
+
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Type:"
+                android:textSize="20sp"/>
+
+
+            <EditText
+                android:id="@+id/customer_type"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number:"
+                android:textSize="20sp"/>
+
+
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:textSize="20sp"/>
+
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product:"
+                android:textSize="20sp"/>
+
+
+            <EditText
+                android:id="@+id/product"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next Meeting Date:"
+                android:textSize="20sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+               >
+
+                <EditText
+                    android:id="@+id/nextMeatingDate"
+                    android:layout_width="325dp"
+                    android:layout_height="40dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:inputType="textPersonName"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_calendar_month_24"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/loadCalender"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"/>
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Action Taken:"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/action_taken"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/submit"
+                android:text="Submit"
+                android:backgroundTint="@color/tranparent_blue"
+                android:layout_marginTop="5dp"/>
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

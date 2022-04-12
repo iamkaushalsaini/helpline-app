@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hlit.helplinetelecom">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HelplineTelecom.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".SingleEmployeLocation" />
+        <activity android:name=".attendance" />
+        <activity android:name=".view_all_detail" />
+        <activity android:name=".login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".btnEvents" />
+        <activity android:name=".MainActivity" />
+        <!--
+   <service android:name=".ForegroundService"
+            android:enabled="true"
+            android:exported="false"/>
+        -->
+        <service
+            android:name=".LocationService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false"
+            android:foregroundServiceType="dataSync"/>
+
+
+        <receiver
+            android:name=".ExeutableService"
+            android:enabled="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+
+
+
+            </intent-filter>
+        </receiver>
+
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC4l5xS3SrxXv0F1dXXEQVzffoFoOboyKs" />
+    </application>
+
+</manifest>

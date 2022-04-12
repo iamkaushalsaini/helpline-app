@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/market_list_card"
+    app:cardElevation="10dp"
+
+    android:layout_marginTop="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12/02/2020"
+            android:id="@+id/date"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="kaushal@gamil.com"
+            android:id="@+id/gmail"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="View"
+            android:backgroundTint="@color/tranparent_blue"
+            android:id="@+id/viewDetail"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

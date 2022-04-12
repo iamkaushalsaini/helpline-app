@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:id="@+id/employeeCard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kaushal saini"
+            android:id="@+id/name"
+            android:textColor="@color/TextSelaty"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kaushalsaini@gmail.com"
+            android:id="@+id/email"
+            android:textColor="@color/TextSelaty"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7500115191"
+            android:id="@+id/mobile"
+            android:textColor="@color/TextSelaty"
+            android:textSize="17sp"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

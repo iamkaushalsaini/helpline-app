@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+       >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/locateUser"
+            android:text="Employees Location"
+            android:visibility="invisible"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/attendance"
+            android:text="Attendance"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pending_payments"
+            android:text="Pending Payments"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/make_complaint"
+            android:text="Make Complaint"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_complaint"
+            android:text="View Complaint"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Create_Estimate"
+            android:text="Create Estimate"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_Estimate"
+            android:text="View Estimate"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Create_Quotation"
+            android:text="Create Quotation"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/m_add_detail"
+            android:text="M.Add Details"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/m_view_details"
+            android:text="M.View Details"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_po"
+            android:text="Create PO"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_po"
+            android:text="View PO"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_customer"
+            android:text="Add Customer"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/customer_account"
+            android:text="Customer Account"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_reminder"
+            android:text="Add Reminder"
+            android:backgroundTint="@color/tranparent_blue"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
