@@ -24,6 +24,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.toolbox.StringRequest;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -42,17 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     //inflating menus ......
-   /* @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.toolbarmenu, menu);
-        MenuItem cart = menu.findItem(R.id.cart_menu);
-        // MenuItem mic = menu.findItem(R.id.mice_menu);
-        actionView = cart.getActionView();
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        MenuItem notification = menu.findItem(R.id.notification);
+
 
         return super.onCreateOptionsMenu(menu);
     }
 
-*/
 
 
 
@@ -193,24 +192,20 @@ public class MainActivity extends AppCompatActivity {
 
         // on click listener on Toolbar menus
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-
-            Fragment temp;
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()){
 
-                   /*case R.id.cart_menu:
+                   case R.id.notification:
+                       User user = SharedPrefManager.getInstance(getApplicationContext()).getUser();
+                      String id = String.valueOf(user.getId()).trim();
+                       if(id.equals("5")|| id.equals("6") || id.equals("23")){
+                           Intent intent = new Intent(MainActivity.this, notificationActivity.class);
+                           startActivity(intent);
+                       }
 
-                        temp = new cartFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, temp).commit();
+                        break;
 
-
-                        break;*/
-                   /* case R.id.mice_menu:
-
-                        voiceSearch();
-
-                        break;*/
 
 
                 }

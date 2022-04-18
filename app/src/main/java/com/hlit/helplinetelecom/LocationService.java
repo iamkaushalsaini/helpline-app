@@ -76,7 +76,7 @@ public class LocationService extends Service {
 
                   //
                    if(action.equals("Of")){
-                       saveInLocal(locationadd, locationResult.getLastLocation().getLatitude(), locationResult.getLastLocation().getLongitude());
+                     //  saveInLocal(locationadd, locationResult.getLastLocation().getLatitude(), locationResult.getLastLocation().getLongitude());
 
 
                    }else {
@@ -204,8 +204,8 @@ public class LocationService extends Service {
         }
 
         LocationRequest locationRequest = new LocationRequest();
-        locationRequest.setInterval(1000);
-        locationRequest.setFastestInterval(1000);
+        locationRequest.setInterval(900000);
+        locationRequest.setFastestInterval(900000);
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

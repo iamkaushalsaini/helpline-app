@@ -26,6 +26,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Converter;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class view_all_detail extends AppCompatActivity {
 
     RecyclerView customerView;
@@ -55,7 +61,55 @@ public class view_all_detail extends AppCompatActivity {
         dateText = intent.getStringExtra("date");
         date.setText(dateText);
 
-        viewAllCustomerDetails();
+      //  viewAllCustomerDetails();
+
+        viewAllCustomerDetailsRetrofit();
+
+
+    }
+
+    private void viewAllCustomerDetailsRetrofit() {
+        progressDialog = new ProgressDialog(view_all_detail.this);
+        progressDialog.setMessage("Loading...");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.show();
+        progressDialog.setCancelable(false);
+
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://hlts.helplinetelecom.com/helplineTelecomApp/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        apiInterfaceViewAllDetails apiInterfaceViewAllDetails = retrofit.create(apiInterfaceViewAllDetails.class);
+
+        Call<ArrayList<view_all_detail_model>> call = apiInterfaceViewAllDetails.getMdetails(role,dateText);
+        call.enqueue(new Callback<ArrayList<view_all_detail_model>>() {
+            @Override
+            public void onResponse(Call<ArrayList<view_all_detail_model>> call, retrofit2.Response<ArrayList<view_all_detail_model>> response) {
+
+                if(response.isSuccessful()){
+                    progressDialog.dismiss();
+                    customertList = response.body();
+
+                    for(int i=0; i<customertList.size(); i++){
+                        view_all_detail_adapter adapter = new view_all_detail_adapter(customertList,getApplicationContext());
+                        customerView.setAdapter(adapter);
+
+                    }
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<view_all_detail_model>> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(),"fail",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
 
 
     }

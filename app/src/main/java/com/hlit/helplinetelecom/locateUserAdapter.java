@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class locateUserAdapter extends RecyclerView.Adapter<locateUserAdapter.myviewholder> {
+public class   locateUserAdapter extends RecyclerView.Adapter<locateUserAdapter.myviewholder> {
 
     ArrayList<userModel> data;
     Context applicationContext;

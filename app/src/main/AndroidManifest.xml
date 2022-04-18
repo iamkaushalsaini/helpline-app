@@ -8,8 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelplineTelecom.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".notificationActivity"></activity>
+        <activity android:name=".MapActivity" />
         <activity android:name=".SingleEmployeLocation" />
         <activity android:name=".attendance" />
         <activity android:name=".view_all_detail" />
@@ -41,27 +41,26 @@
             android:name=".LocationService"
             android:enabled="true"
             android:exported="false"
-            android:stopWithTask="false"
-            android:foregroundServiceType="dataSync"/>
-
+            android:foregroundServiceType="dataSync"
+            android:stopWithTask="false" />
 
         <receiver
             android:name=".ExeutableService"
-            android:enabled="true"
-            >
+            android:enabled="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
-
-
-
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-
-
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC4l5xS3SrxXv0F1dXXEQVzffoFoOboyKs" />
+
+        <service android:name=".notification.MyfirebaseServise">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

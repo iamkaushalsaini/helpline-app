@@ -31,6 +31,7 @@ public class ExeutableService  extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
+
         if(intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)){
             Intent intent2 = new Intent(context, LocationService.class);
             intent2.setAction(Constant.ACTION_START_LOCATION_SERVICE);
@@ -74,7 +75,7 @@ public class ExeutableService  extends BroadcastReceiver {
            if(!locationList.isEmpty()){
 
               // Toast.makeText(context,locations,Toast.LENGTH_SHORT).show();
-               sendFromLocalToServer(context, locations);
+             //  sendFromLocalToServer(context, locations);
 
            }
 
@@ -91,10 +92,16 @@ public class ExeutableService  extends BroadcastReceiver {
                     contentResolver, Settings.Secure.LOCATION_MODE,Settings.Secure.LOCATION_MODE_OFF);
             if(mode != Settings.Secure.LOCATION_MODE_OFF){
                 Toast.makeText(context, "Location On", Toast.LENGTH_SHORT).show();
+                String note ="Location On";
+                sendGpsMode(note, context);
+
+
 
             }else {
 
                 Toast.makeText(context, "Location off", Toast.LENGTH_SHORT).show();
+                String note ="Location OF";
+                sendGpsMode(note, context);
 
             }
 
@@ -105,6 +112,38 @@ public class ExeutableService  extends BroadcastReceiver {
        /// if(intent.getAction().matches(LocationManager.PROVIDERS_CHANGED_ACTION))
 
 
+
+    }
+
+    private void sendGpsMode(String note, Context context) {
+        User user = SharedPrefManager.getInstance(context).getUser();
+        String userId =  String.valueOf(user.getId());
+
+        StringRequest request = new StringRequest(Request.Method.POST, URLs.sendGpsMode, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(context,error.toString(),Toast.LENGTH_SHORT).show();
+
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String> param = new HashMap<String, String>();
+                param.put("note",note);
+                param.put("user_id",userId);
+                param.put("user_name",user.getName().trim());
+                return param;
+            }
+        };
+
+        VolleySingleton.getInstance(context).addToRequestQueue(request);
 
     }
 

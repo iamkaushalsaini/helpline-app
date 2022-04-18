@@ -14,5 +14,9 @@ public class URLs {
     public static final String loadLocationDates = ROOT_URL_2 + "loadLocationDates.php";
     public static final String loadMarksLocation = ROOT_URL_2 + "loadLocationDates.php";
     public static final String sendFromLocalToServer = ROOT_URL_2 + "sendFromLocalToServer.php";
+    public static final String checkIn = ROOT_URL_2 + "checkIn.php";
+    public static final String checkOut = ROOT_URL_2 + "checkOut.php";
+    public static final String sendGpsMode = ROOT_URL_2 + "sendGpsMode.php";
+    public static final String getAllNotification = ROOT_URL_2 + "getAllNotification.php";
 
 }
